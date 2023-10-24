@@ -1,0 +1,13 @@
+.pokemon-search-result {
+      
+}
+.pkm-container {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+} 
+
+.pkm-container > * {
+    background-color: green;
+    gap: 10%;
+} 
