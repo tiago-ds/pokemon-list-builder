@@ -1,11 +1,7 @@
 export type Pokemon = {
     name: string,
     spriteUrl: string,
-    types: Array<PokemonType>,
+    types: Array<string>,
     description: string
 }
 
-export type PokemonType = {
-    name: string,
-    url: string
-}

@@ -5,16 +5,19 @@ import Button from '@mui/material/Button';
 
 
 import { useState } from 'react';
-import { getPokemonProps } from '../../Services/PokeApiService';
+import { getPokemons } from '../../Services/PokeApiService';
 
+interface ISearchBar {
+    setPokeResult: Function;
+}
 
-export default function SearchBar( {setPokeResult} ) {    
+export default function SearchBar( {setPokeResult}: ISearchBar ) {    
     const [search, setSearch] = useState('');
 
     const onTextChange = (evt) => setSearch(evt?.target?.value);
 
     const searchPokemon = async () => {
-        const pokemon = await getPokemonProps(search);
+        const pokemon = await getPokemons(search);
         setPokeResult(pokemon);
     }
 

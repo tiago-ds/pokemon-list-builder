@@ -23,3 +23,20 @@ export async function getPokemonProps(pokemonName: string): Promise<Pokemon> {
     }
     return poke;
 }
+
+export async function getPokemons(pokemonName: string): Promise<Pokemon[]> {
+    const pokemonData = (await getPokemon(pokemonName)).data;
+    const pokemonDescription = (await getPokemonDescription(pokemonName)).data;
+
+    const poke: Pokemon = {
+        name: pokemonData.name,
+        spriteUrl: pokemonData.sprites.front_default,
+        description: parseDescription(pokemonDescription.flavor_text_entries[0].flavor_text),
+        types: [pokemonData.types[0].type.name, pokemonData.types[1]?.type?.name]
+    }
+    return [poke];
+}
+
+function parseDescription(description: string): string {
+    return description.replace("POKéMON", "pokemon").replace("", " ");
+}

@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import SearchBar from './Components/SearchBar/SearchBar';
 import PokemonPageComponent from './Components/PokemonPage/PokemonPageComponent';
 

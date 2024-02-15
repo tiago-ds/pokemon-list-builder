@@ -4,12 +4,12 @@ import SearchBar from "../SearchBar";
 import PokemonSearchResult from "../PokemonSearchResult";
 
 const PokemonPageComponent = () => {
-    const [pokeResult, setPokeResult] = useState(undefined);
+    const [pokeResult, setPokeResult] = useState([]);
     
     return (
         <>
             <SearchBar setPokeResult={setPokeResult}/>
-            <PokemonSearchResult pokeResult={pokeResult}/>
+            <PokemonSearchResult pokemons={pokeResult}/>
         </>
     )
 }
