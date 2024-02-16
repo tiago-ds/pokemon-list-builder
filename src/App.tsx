@@ -12,8 +12,8 @@ function App() {
     <NavComponent />
     <BrowserRouter>
       <Routes>
-        <Route path="/search" element={<SearchComponent />} />
-        <Route path="/favorite" element={<FavoritesComponent />} />
+          <Route path="/search" element={<SearchComponent />} />
+          <Route path="/favorite" element={<FavoritesComponent />} />
       </Routes>
     </BrowserRouter>
     </>
