@@ -1,8 +1,7 @@
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Icon } from '@mui/material';
 
-import { Pokemon } from '../../../Types/Pokemon';
+import { Pokemon } from '../../Types/Pokemon';
 import './pokemon-card.scss';
 import { useState } from 'react';
 
@@ -17,6 +16,11 @@ export default function PokemonCard({pokemon}: IPokemonCardProps) {
         if(isFavorite) {
             sessionStorage.removeItem(pokemon.name);
             setIsFavorite(false);
+            return;
+        }
+
+        if(sessionStorage.length === 6) {
+            alert('You can only have 6 favorite pokemons');
             return;
         }
 

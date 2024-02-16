@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import SearchBar from "../SearchBar";
-import PokemonSearchResult from "../PokemonSearchResult";
+import SearchBar from "./SearchBar/SearchBar";
+import PokemonSearchResult from "./PokemonSearchResult/PokemonSearchResult";
 
-const PokemonPageComponent = () => {
+const SearchComponent = () => {
     const [pokeResult, setPokeResult] = useState([]);
     
     return (
@@ -14,4 +14,4 @@ const PokemonPageComponent = () => {
     )
 }
 
-export default PokemonPageComponent;
+export default SearchComponent;

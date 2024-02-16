@@ -1,24 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
-:root {
-    // improve color palette
-    --primary: #F7D8A7; // Background
-    --primary-2: #F7F0A7; // Titulo botoes e elementos
-    --secondary: #F7A7D8; // Fundos e detalhes
-    --secondary-2:  #E7A7A7; // Menus e icones
-    --text-color: #F7F7F7; // Textos
-    font-family: "Fredoka", sans-serif;
+* {
+    margin: 0;
 }
 
 .pokemon-card {
+    margin: 5rem;
     box-sizing: border-box;
-    border: 2px solid var(--secondary-2);
     display: flex;
     flex-direction: row;
-    border-radius: 5px;
+    border-radius: 15px;
     width: 500px;
     height: 150px;
-    background-color: var(--primary-2);
+    background-color: var(--primary);
     color: var(--text);
 }
 
@@ -28,8 +22,9 @@
 }
 
 .icon {
-    color: var(--secondary-2);
+    color: var(--tertiary);
     cursor: pointer;
+    margin-top: 2.5rem;
 }
 
 img {
@@ -37,23 +32,27 @@ img {
     width: 96px;
     height: 96px;
     border-radius: 50%;
-    background-color: var(--secondary-2);
+    background-color: var(--secondary);
 }
 
 .inline {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
 }
 
 .types {
     display: flex;
     flex-direction: row;
     gap: 5px;
+    margin: 0;
+    margin-top: 8px;
 }
 
 .description {
     width: 80%;
     margin-top: 0;
+    font-size: 14px;
 }
