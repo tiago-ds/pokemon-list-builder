@@ -24,7 +24,7 @@ export default function PokemonCard({pokemon}: IPokemonCardProps) {
             return;
         }
 
-        sessionStorage.setItem(pokemon.name, 'true');
+        sessionStorage.setItem(pokemon.name, JSON.stringify(pokemon));
         setIsFavorite(true);
     }
 
