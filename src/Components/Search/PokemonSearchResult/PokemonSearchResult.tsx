@@ -9,8 +9,8 @@ interface IPokemonSearchResultProps {
 
 export default function PokemonSearchResult({pokemons}: IPokemonSearchResultProps) {
         return (
-            <>
-                {pokemons?.map((pokemon) => <PokemonCard pokemon={pokemon} key={pokemon.name}/>)}
-            </>
+            <div>
+                {pokemons?.map((pokemon) => <PokemonCard pokemon={pokemon} key={pokemon.name} /> )}
+            </div>
         )
 }

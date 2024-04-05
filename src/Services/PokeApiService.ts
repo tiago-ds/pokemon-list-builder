@@ -38,5 +38,8 @@ export async function getPokemons(pokemonName: string): Promise<Pokemon[]> {
 }
 
 function parseDescription(description: string, pokemonName: string): string {
-    return description.replace("POKéMON", "pokemon").replace("", " ").replace(pokemonName.toUpperCase(), pokemonName.toLowerCase());
+    return description.replace("POKéMON", "pokemon").replace("", " ")
+        .replace(pokemonName.toUpperCase(), pokemonName.toLowerCase()
+        .replace("TRAINER", "trainer")
+        .replace(pokemonName.charAt(0), pokemonName.charAt(0).toUpperCase()));
 }

@@ -34,7 +34,9 @@ export default function PokemonCard({pokemon}: IPokemonCardProps) {
 
     return (
         <div className="pokemon-card">
-            <img src={pokemon.spriteUrl} alt={pokemon.name} />
+            <div>
+                <img src={pokemon.spriteUrl} alt={pokemon.name} />
+            </div>
             <div>
                 <div className="inline">
                     <p className="pokemon-name">{capitalize(pokemon.name)}</p>
