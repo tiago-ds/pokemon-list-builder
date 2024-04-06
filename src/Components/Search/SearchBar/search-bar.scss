@@ -1,16 +1,19 @@
-.container {
+.search-container {
     display: flex;
     width: 30%;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 
     margin: 10px;
-    padding: 10px;
     gap: 10px;
 }
 
-.loading-animation {
+.search-container .loading-animation {
     color: var(--secondary)!important;
+}
+
+.search-container .center {
+    align-self: center;
 }
 
 .poke-search {
@@ -58,7 +61,6 @@ input:focus{
     left: 35px;
     transform: translate(-50%,-50%);
     font-size: 26px;
-    transition: .2s;
     margin: 0;
     z-index: -1;
 }
@@ -66,7 +68,6 @@ input:focus{
 input:focus + .icon {
     z-index: 0;
     width: 90px;
-    transition: .5s;
 }
 
 input:focus::placeholder {

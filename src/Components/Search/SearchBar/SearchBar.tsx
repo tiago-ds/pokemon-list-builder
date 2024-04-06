@@ -41,7 +41,7 @@ export default function SearchBar( {setPokeResult}: ISearchBar ) {
     }
 
     return(
-        <div className='container'>
+        <div className='search-container'>
             <div className="poke-search">
                 <input type="text" 
                     className="input"
@@ -54,7 +54,9 @@ export default function SearchBar( {setPokeResult}: ISearchBar ) {
                 />
                 <img src="/src/Images/pokeball.svg" alt="pokeball icon" className="icon"/>
             </div>
-            { loading ? <CircularProgress className="loading-animation"/> : "" }
+            <div className="center">
+                { loading ? <CircularProgress className="loading-animation"/> : "" }
+            </div>
             { notFound ? <PokemonNotFound pokemonName={pokemonName}/> : "" }
         </div>
     );
