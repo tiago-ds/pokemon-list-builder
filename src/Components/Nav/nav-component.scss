@@ -14,7 +14,7 @@ nav {
 }
 
 .nav-item .active {
-    background-color: #DC0A2D;
+    background-color: var(--pokedex-red);
     
     padding-right: 75px;
     
@@ -22,14 +22,14 @@ nav {
 }
 
 .nav-item :not(.active){
-    background-color: #DC0A2D;
+    background-color: var(--pokedex-red);
     
     padding-right: 20px;
     padding-left: 5px;
 }
 
 .nav-link {
-    color: #DEDEDE;
+    color: var(--pokedex-white);
 
     display: flex;
     flex-direction: row;
@@ -41,11 +41,13 @@ nav {
 }
 
 .ball {
-    position: absolute;
-    left: 520px;
-    background-color: #27ABFE;
+    background-color: var(--pokedex-blue);
+    
     width: 46px;
     height: 46px;
+    
+    position: absolute;
+    left: 520px;
 
     border: 5px solid black;
     border-radius: 50%;

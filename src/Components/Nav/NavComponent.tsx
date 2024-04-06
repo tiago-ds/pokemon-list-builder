@@ -1,13 +1,30 @@
 import "./nav-component.scss";
-import { useState } from 'react';
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { NavLink, useLocation } from "react-router-dom";
+
+type NavItem = {
+    name: string;
+    path: string;
+}
 
 export default function NavComponent() {
-    const [navItems, setNavItems] = useState(
-        [
-            { name: "SEARCH", path: "/search" },
-            { name: "FAVORITES", path: "/favorite" }
-        ]);
+    const location = useLocation();
+    const [navItems, setNavItems] = useState<NavItem[]>([]);
+
+    useEffect(() => {
+        location.pathname === "/search" ?  
+        setNavItems(
+            [
+                { name: "FAVORITES", path: "/favorite" },
+                { name: "SEARCH", path: "/search"}
+            ]
+        ) : setNavItems(
+            [ 
+                 { name: "SEARCH", path: "/search" },
+                 { name: "FAVORITES", path: "/favorite" }
+             ]
+         );
+    }, [location]);
 
     const handleClick = (name: string) => {
         setNavItems((prevNavItems) => {
@@ -24,7 +41,10 @@ export default function NavComponent() {
         <div>
             <nav>                
                 { navItems?.map((item) =>
-                    <div className="nav-item">
+                    <div 
+                        className="nav-item"
+                        key={item.name}
+                    >
                         <NavLink 
                             to={item.path} 
                             onClick={() => handleClick(item.name)}
