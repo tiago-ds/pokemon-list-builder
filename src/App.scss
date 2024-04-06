@@ -1,15 +1,19 @@
 :root {
-    //pokédex-colors
+    // Pokédex colors
     --pokedex-red: #DC0A2D;
     --pokedex-white: #DEDEDE;
     --pokedex-blue: #27ABFE;
     --pokedex-black: #00312C;
 
-    // improve color palette
-    --primary: #E6E6FA; // Background
-    --secondary: #D4C2FF; // Titulo botoes e elementos
-    --tertiary: #C9B7F7; // Fundos e detalhes
-    --accent:  #FDF5FF; // Menus e icones
-    --text-color: #F7F7F7; // Textos
+    // Color palette
+    --pokemon-blue: #3B4CCA; /* Base color */
+    --pokemon-blue-light: #99B3E6; /* Lighter blue */
+    --pokemon-blue-light-2: #c3d3f1;  /* Even lighter blue */
+    --pokemon-blue-dark: #1E3A8A; /* Darker blue */
+    
+    --pokemon-orange: #FF9933; /* Complementary color */
+    --pokemon-orange-light: #FFE082; /* Lighter orange */
+    --pokemon-orange-dark: #CC7A00; /* Darker orange */
+ 
     font-family: "Fredoka", sans-serif;
 }
