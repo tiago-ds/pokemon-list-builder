@@ -48,9 +48,9 @@ export default function SearchBar( {setPokeResult}: ISearchBar ) {
                     name="search-input" 
                     value={search} 
                     placeholder='Search Pokémon...'
-                    onChange={()=>onTextChange(event)} 
-                    onBlur={()=>onFocusOut()}
-                    onKeyDown={ () => { if(event.key === 'Enter') searchPokemon() } }
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) => onTextChange(event)} 
+                    onBlur={() => onFocusOut()}
+                    onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => { if(event?.key === 'Enter') searchPokemon() } }
                 />
                 <img src="/src/Images/pokeball.svg" alt="pokeball icon" className="icon"/>
             </div>
