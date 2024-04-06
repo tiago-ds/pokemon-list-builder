@@ -4,7 +4,10 @@ import { Pokemon } from '../Types/Pokemon';
 const baseUrl: string = "https://pokeapi.co/api/v2/";
 
 async function getPokemon(pokemonName: string)  {
-    return axios.get(`${baseUrl}pokemon/${pokemonName.toLowerCase().trim()}`);
+    return axios.get(`${baseUrl}pokemon/${pokemonName.toLowerCase().trim()}`).catch(
+        () => {
+            throw new Error("Pokemon not found");
+        });
 }
 
 async function getPokemonDescription(pokemonName: string) {

@@ -7,6 +7,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 import { useState } from 'react';
 import { getPokemons } from '../../../Services/PokeApiService';
+import PokemonNotFound from '../PokemonNotFound/PokemonNotFound';
 
 interface ISearchBar {
     setPokeResult: Function;
@@ -14,15 +15,28 @@ interface ISearchBar {
 
 export default function SearchBar( {setPokeResult}: ISearchBar ) {    
     const [search, setSearch] = useState('');
+    const [pokemonName, setPokemonName] = useState('');
     const [loading, setLoading] = useState(false);
+    const [notFound, setNotFound] = useState(false);
 
     const onTextChange = (evt: React.ChangeEvent<HTMLInputElement>) => setSearch(evt?.target?.value);
     const onFocusOut = () => setSearch("");
 
     const searchPokemon = async () => {
         setLoading(true);
-        const pokemon = await getPokemons(search);
-        setPokeResult(pokemon);
+        setPokemonName(search);
+        setNotFound(false);
+
+        try {
+            const pokemon = await getPokemons(search);
+            setPokeResult(pokemon);
+        } catch (e) {
+            setLoading(false);
+            setNotFound(true);
+            setPokeResult([]);
+            return;
+        }
+        
         setLoading(false);
     }
 
@@ -41,7 +55,7 @@ export default function SearchBar( {setPokeResult}: ISearchBar ) {
                 <img src="/src/Images/pokeball.svg" alt="pokeball icon" className="icon"/>
             </div>
             { loading ? <CircularProgress className="loading-animation"/> : "" }
-            {/*"<Button variant='contained'  onClick={() => searchPokemon()}>Search</Button>"*/}
+            { notFound ? <PokemonNotFound pokemonName={pokemonName}/> : "" }
         </div>
     );
 }
