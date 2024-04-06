@@ -9,8 +9,8 @@ function App() {
   
   return (
     <>
-    <NavComponent />
     <BrowserRouter>
+      <NavComponent />
       <Routes>
           <Route path="/search" element={<SearchComponent />} />
           <Route path="/favorite" element={<FavoritesComponent />} />
