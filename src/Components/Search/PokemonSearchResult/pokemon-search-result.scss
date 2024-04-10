@@ -1,21 +1,21 @@
-.results {
-    margin-top: 25px;
-}
 
 .results-container {
     margin-top: 25px;
-}
 
-.results-container .result-display {
-    background-color: var(--pokedex-red);
-    color: var(--pokedex-white);
-    
-    margin-left: 0px;
-    margin-top: 25px;
-    padding: 0 10px 0 10px;
-    
-    border: 3px solid black;
-    border-radius: 0 50px 50px 0;
-    border-left: 0;
-    
+    .results {
+        margin-top: 25px;
+    }    
+
+    .result-display {
+        background-color: var(--pokedex-red);
+        color: var(--pokedex-white);
+        
+        margin-left: 0px;
+        margin-top: 25px;
+        padding: 0 10px 0 10px;
+        
+        border: 3px solid black;
+        border-radius: 0 50px 50px 0;
+        border-left: 0;
+    }
 }

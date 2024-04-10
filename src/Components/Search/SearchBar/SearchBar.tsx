@@ -45,7 +45,6 @@ export default function SearchBar({ setPokeResult }: ISearchBar) {
             <div className='poke-search'>
                 <input
                     type='text'
-                    className='input'
                     name='search-input'
                     value={search}
                     placeholder='Search Pokémon...'
