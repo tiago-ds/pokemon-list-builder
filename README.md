@@ -1,27 +1,17 @@
-# React + TypeScript + Vite
+# Pokemon Favoriter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository it's a small project for React training.
 
-Currently, two official plugins are available:
+It was build using React framework, and [The Poké API](https://pokeapi.co/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Functionalities
 
-## Expanding the ESLint configuration
+- Search a Pokémon by its name
+- Read its description, see its type(s)
+- Mark it as favorite
+- Visualize your favorited Pokémons
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Enjoy!
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+ 
