@@ -24,6 +24,7 @@ export default function SearchBar({ setPokeResult }: ISearchBar) {
     const searchPokemon = async () => {
         setLoading(true);
         setPokemonName(search);
+        setPokeResult([]);
         setNotFound(false);
 
         try {

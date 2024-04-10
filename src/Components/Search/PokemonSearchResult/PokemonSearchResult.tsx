@@ -11,10 +11,13 @@ export default function PokemonSearchResult({
     pokemons,
 }: IPokemonSearchResultProps) {
     return (
-        <div>
-            {pokemons?.map((pokemon) => (
-                <PokemonCard pokemon={pokemon} key={pokemon.name} />
-            ))}
+        <div className="results-container">
+            <div className="results">
+                {pokemons?.map((pokemon) => (
+                    <PokemonCard pokemon={pokemon} key={pokemon.name} />
+                ))}
+            </div>
+            {pokemons && pokemons.length > 0 ? <span className="result-display"> FOUND </span>: "" }
         </div>
     );
 }
