@@ -58,12 +58,11 @@ function parseDescription(description: string, pokemonName: string): string {
         .replace("", " ")
         .replace(
             pokemonName.toUpperCase(),
-            pokemonName
-                .toLowerCase()
-                .replace("TRAINER", "trainer")
-                .replace(
-                    pokemonName.charAt(0),
-                    pokemonName.charAt(0).toUpperCase()
-                )
+            pokemonName.toLowerCase()
+        )
+        .replace("TRAINER", "trainer")
+        .replace(
+            pokemonName.charAt(0),
+            pokemonName.charAt(0).toUpperCase()
         );
 }
