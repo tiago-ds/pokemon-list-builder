@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import "./favorites-component.scss";	
+
 import PokemonCard from "../PokemonCard/PokemonCard";
 import { Pokemon } from "../../Types/Pokemon";
 
@@ -15,9 +17,16 @@ const FavoritesComponent = () => {
     }, []);
     return (
         <>
-            {pokemons.map((pokemon) => (
-                <PokemonCard pokemon={pokemon} key={pokemon.name as string} />
-            ))}
+            <div className="favorites-container">
+                <span className="selected-text">YOUR SELECTED POKEMONS</span>
+                <div className="grid-container">
+                    {pokemons.map((pokemon) => (
+                        <div className="grid-item">
+                            <PokemonCard pokemon={pokemon} key={pokemon.name as string} />
+                        </div>
+                    ))}
+                </div>
+            </div>
         </>
     );
 };

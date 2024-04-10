@@ -1,0 +1,29 @@
+.favorites-container {
+    
+    margin: 25px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 20px;
+
+    .selected-text {
+        font-size: 1.5rem;
+        width: fit-content;
+        background-color: var(--pokedex-red);
+        border: 4px solid black;
+        border-radius: 50px;
+        padding: 10px;
+        color: var(--pokedex-white);
+    }
+
+    .grid-container {
+        display: grid;
+        margin-top: 25px;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .grid-item {
+        padding: 10px;
+    }
+    
+}
