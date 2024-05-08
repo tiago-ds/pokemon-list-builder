@@ -6,6 +6,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useState } from "react";
 import { getPokemons } from "../../../Services/PokeApiService";
 import PokemonNotFound from "../PokemonNotFound/PokemonNotFound";
+import assets from "../../../../assets/assets.ts";
 
 interface ISearchBar {
     setPokeResult: Function;
@@ -59,7 +60,7 @@ export default function SearchBar({ setPokeResult }: ISearchBar) {
                     }}
                 />
                 <img
-                    src='/src/Images/pokeball.svg'
+                    src={assets.pokeball}
                     alt='pokeball icon'
                     className='icon'
                 />
